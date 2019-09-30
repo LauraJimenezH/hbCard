@@ -1,0 +1,297 @@
+body {
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+}
+
+#card-two {
+    z-index: 1;
+    margin: 0 auto;
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+	box-shadow: 0 8px 40px rgba(#000000, .2);
+    border-radius: 10px;
+    text-align: center;
+    transition: 1s;
+    transform-origin: 0;
+
+}
+
+#card-two,
+#card-one {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.open-card {
+    transform: rotateY(90deg);
+}
+
+#card-two p {
+    color: black;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#card-two img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+#message2 {
+    font-size: 16pt;
+}
+
+#card-one {
+    z-index: 0;
+    position: absolute;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 80%;
+    height: 80vh;
+    text-align: center;
+}
+
+#card-one p {
+    color: black;
+    font-size: 16pt;
+    text-align: center;
+}
+
+#card-one img {
+    width: 100px;
+    height: auto;
+    
+}
+
+#message {
+    color: black;
+    font-size: 12pt;
+    text-align: center;
+}
+
+button {
+    background: #3a556a;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 26px;
+    outline: none;
+}
+
+
+.wordCarousel {
+    font-weight: 100;
+    color: #000000;
+}
+
+
+.wordCarousel div {
+    overflow: hidden;
+    position: relative;
+    height: 65px;
+    padding-top: 10px;
+    margin-top: -10px;
+    top: 45px;
+}
+
+.wordCarousel div ul {
+    padding-left: 0px;
+}
+
+.wordCarousel div li {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 28px;
+    padding: 0 10px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: block;
+}
+
+.flip2 {
+    animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip3 {
+    animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+.flip4 {
+    animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip2 {
+    0% {
+        margin-top: -180px;
+    }
+
+    5% {
+        margin-top: -90px;
+    }
+
+    50% {
+        margin-top: -90px;
+    }
+
+    55% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+}
+
+@keyframes flip3 {
+    0% {
+        margin-top: -270px;
+    }
+
+    5% {
+        margin-top: -180px;
+    }
+
+    33% {
+        margin-top: -180px;
+    }
+
+    38% {
+        margin-top: -90px;
+    }
+
+    66% {
+        margin-top: -90px;
+    }
+
+    71% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+}
+
+@keyframes flip4 {
+    0% {
+        margin-top: -360px;
+    }
+
+    5% {
+        margin-top: -270px;
+    }
+
+    25% {
+        margin-top: -270px;
+    }
+
+    30% {
+        margin-top: -180px;
+    }
+
+    50% {
+        margin-top: -180px;
+    }
+
+    55% {
+        margin-top: -90px;
+    }
+
+    75% {
+        margin-top: -90px;
+    }
+
+    80% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+}
+
+
+
+/* modal */
+
+.modalDialog {
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    display: none;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+    width: 60%;
+    position: relative;
+    margin: 50% auto;
+    padding: 40px;
+    border-radius: 5px;
+    background: #fff;
+    transition: opacity 400ms ease-in;
+}
+
+.modalDialog input {
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    height: 1rem;
+    padding: .375rem .75rem;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.close {
+    color: rgb(0, 0, 0);
+    line-height: 25px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
