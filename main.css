@@ -83,6 +83,10 @@ main {
     text-align: center;
 }
 
+#card-one p {
+    font-size: 15pt !important;
+}
+
 button {
     background: #3a556a;
     color: white;
